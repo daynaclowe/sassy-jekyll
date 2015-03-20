@@ -142,9 +142,16 @@ table {
 td, th {
   padding: 0; }
 
+body {
+  margin: 0;
+  background: url(../images/single_bp_bg.png) repeat scroll 0px 0px transparent; }
+
 header {
-  height: 450px;
+  height: 600px;
   background: #262626;
+  background-image: url(../images/cover-grey.png);
+  background-repeat: no-repeat;
+  background-position: center;
   color: white; }
   header .logo {
     height: 50px;
@@ -160,26 +167,31 @@ header {
       margin-left: 20px;
       text-decoration: none;
       text-transform: uppercase;
-      color: #fff;
+      color: #434343;
+      font-family: "Muli", sans-serif;
       font-weight: 700;
       font-size: 1em; }
       header nav a:hover {
         color: #FFCF0B; }
-  header h1 {
+  header h1.name {
     display: block;
     margin: 0;
     padding-top: 60px;
     text-align: center;
     font-family: "Oswald", sans-serif;
-    font-size: 6em;
+    font-size: 6.5em;
     font-weight: 700;
     color: #FFCF0B;
     text-transform: uppercase;
     clear: both; }
-  header h2 {
+  header h2.title {
     text-align: center;
     margin: 0;
-    font-size: 5em; }
-  header h3 {
+    font-family: "Special Elite", cursive;
+    font-size: 3em; }
+  header h3.sub-title {
     text-align: center;
-    color: white; }
+    margin: 0;
+    color: white;
+    font-family: "Special Elite", cursive;
+    font-size: 2em; }

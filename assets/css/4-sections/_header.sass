@@ -1,6 +1,10 @@
 header
-  height: 450px
+  height: 600px
   background: $dark-grey
+  background:
+    image: url(../images/cover-grey.png)
+    repeat: no-repeat
+    position: center
 
   .logo
     +size(50px)
@@ -16,34 +20,40 @@ header
       margin-left: 20px
       text-decoration: none
       text-transform: uppercase
-      color: #fff
+      color: $light-grey
       font:
+        family: $font-body
         weight: 700
         size: 1em
 
       &:hover
         color: $yellow
 
-  h1
+  h1.name
     display: block
     margin: 0
     padding-top: 60px
     text-align: center
     font:
       family: $font-head
-      size: 6em
+      size: 6.5em
       weight: 700
     color: $yellow
     text-transform: uppercase
     clear: both
 
-  h2
+  h2.title
     text-align: center
     margin: 0
     font:
-      size: 5em
+      family: $font-sub
+      size: 3em
   color: white
 
-  h3
+  h3.sub-title
     text-align: center
+    margin: 0
     color: white
+    font:
+      family: $font-sub
+      size: 2em
