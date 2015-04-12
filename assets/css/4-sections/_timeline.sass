@@ -1,0 +1,186 @@
+%flex
+  display: flex
+
+#the-story-so-far
+  background-color: transparent
+  width: auto
+
+  img#triangle
+    width: 75px
+    height: relative
+    z-index: 1
+    display: block
+    margin: auto
+    margin-top: -1px
+
+h2.story-heading
+  font-family: Oswald
+  font-size: 4em
+  margin-top: 30px
+  text-align: center
+  text-transform: uppercase
+  color: $dark-grey
+  @media screen and (max-width: $phone)
+    font-size: 3em
+    margin-bottom: 0px
+
+#timeline
+  position: relative
+  padding: 2em 0
+  margin-top: 2em
+  margin-bottom: 2em
+
+#timeline::before
+  /* this is the vertical line */
+  content: ''
+  position: absolute
+  top: 0
+  left: 50%
+  height: 100%
+  width: 4px
+  background: $light-grey
+  top: 0px
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%, -50%)
+  @media screen and (max-width: $tablet)
+    display: none
+
+
+.parent-row
+  max-width: 900px
+  margin: 0 auto
+  @extend %flex
+  // justify-content: space-between
+
+  .col-1
+    @extend %flex
+    flex-direction: column
+    width: auto
+    margin-right: -30px
+    padding: 20px
+
+    @media screen and (max-width: $tablet)
+      margin: 0 auto
+
+  .col-2
+    width: auto
+    margin-top: 65px
+    @media screen and (max-width: $tablet)
+      display: none
+
+.parent-row-opp
+  max-width: 900px
+  margin: 0 auto
+  @extend %flex
+  justify-content: flex-end
+
+  .col-3
+    width: auto
+    margin-top: 65px
+    margin-right: -30px
+    @media screen and (max-width: $tablet)
+      display: none
+
+  .col-4
+    @extend %flex
+    flex-direction: column
+    width: auto
+    padding: 20px
+
+    @media screen and (max-width: $tablet)
+      margin: 0 auto
+
+p.story
+  padding: 0px 20px
+  margin: 20px auto
+  max-width: 350px
+  font-family: $font-body
+
+img.timeline-image
+  margin: 0 auto
+  flex-shrink: 0
+
+.time-circle
+  position: relative
+  width: 100px
+  height: 100px
+  box-shadow: 0 0 0 5px $dark-grey
+  background: #fff
+  -moz-border-radius: 50%
+  -webkit-border-radius: 50%
+  border-radius: 50%
+
+  p
+    text-align: center
+    font-family: $font-body
+    font-size: 2em
+    padding-top: 29px
+
+
+
+// .timeline-item-right
+//   display: inline-block
+//   max-width: 475px
+//   background-color: #fff
+//   border-radius: 10%
+//   margin: 20px 50px
+//   padding-top: 20px
+//   float: right
+
+
+// .timeline-item-left
+//   display: inline-block
+//   max-width: 475px
+//   background-color: #fff
+//   border-radius: 10%
+//   margin: 20px 50px
+//   padding-top: 20px
+//   float: left
+
+
+// #the-story-so-far
+//   background-color: transparent
+//   margin-bottom: 20px
+//   padding: 0px 5% 0px 5%
+
+// .line
+//   display: inline
+//   width: 50%
+//   height: 3px
+//   background-color: $dark-grey
+//   float: right
+//   z-index: -1
+//   margin-top: -125px
+
+
+// .line-left
+//   display: inline
+//   width: 50%
+//   height: 3px
+//   background-color: $dark-grey
+//   float: left
+//   z-index: -1
+//   margin-top: -125px
+
+
+// .time-circle-right
+//   float: right
+//   margin-top: 122px
+//   margin-right: -52px
+//   position: relative
+//   width: 100px
+//   height: 100px
+//   box-shadow: 0 0 0 5px $dark-grey
+//   background: #fff
+//   -moz-border-radius: 50%
+//   -webkit-border-radius: 50%
+//   border-radius: 50%
+//   z-index: 9999
+//   text-align: center
+//   font-family: $font-body
+//   font-size: 2em
+//   padding-top: 1em
+
+
+

@@ -186,6 +186,10 @@ header {
     color: #FFCF0B;
     text-transform: uppercase;
     clear: both; }
+    @media screen and (max-width: 768px) {
+      header h1.name {
+        font-size: 5em;
+        line-height: 1.2em; } }
     @media screen and (max-width: 500px) {
       header h1.name {
         font-size: 4em;
@@ -196,9 +200,14 @@ header {
     font-family: "Special Elite", cursive;
     font-size: 3em;
     color: white; }
+    @media screen and (max-width: 768px) {
+      header h2.title {
+        font-size: 2em;
+        line-height: 1.2em; } }
     @media screen and (max-width: 500px) {
       header h2.title {
-        font-size: 1.5em; } }
+        font-size: 1.5em;
+        margin-top: 1em; } }
   header h3.sub-title {
     text-align: center;
     margin: 0;
@@ -207,5 +216,116 @@ header {
     font-size: 2em; }
     @media screen and (max-width: 500px) {
       header h3.sub-title {
-        font-size: 1.5em;
+        font-size: 1.6em;
         padding-top: 5px; } }
+
+.parent-row, .parent-row .col-1, .parent-row-opp, .parent-row-opp .col-4 {
+  display: flex; }
+
+#the-story-so-far {
+  background-color: transparent;
+  width: auto; }
+  #the-story-so-far img#triangle {
+    width: 75px;
+    height: relative;
+    z-index: 1;
+    display: block;
+    margin: auto;
+    margin-top: -1px; }
+
+h2.story-heading {
+  font-family: Oswald;
+  font-size: 4em;
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #262626; }
+  @media screen and (max-width: 500px) {
+    h2.story-heading {
+      font-size: 3em;
+      margin-bottom: 0px; } }
+
+#timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
+#timeline::before {
+  /* this is the vertical line */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 4px;
+  background: #434343;
+  top: 0px;
+    top-left: 50%;
+    top-margin-right: -50%;
+    top-transform: translate(-50%, -50%); }
+  @media screen and (max-width: 768px) {
+    #timeline::before {
+      display: none; } }
+
+.parent-row {
+  max-width: 900px;
+  margin: 0 auto; }
+  .parent-row .col-1 {
+    flex-direction: column;
+    width: auto;
+    margin-right: -30px;
+    padding: 20px; }
+    @media screen and (max-width: 768px) {
+      .parent-row .col-1 {
+        margin: 0 auto; } }
+  .parent-row .col-2 {
+    width: auto;
+    margin-top: 65px; }
+    @media screen and (max-width: 768px) {
+      .parent-row .col-2 {
+        display: none; } }
+
+.parent-row-opp {
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: flex-end; }
+  .parent-row-opp .col-3 {
+    width: auto;
+    margin-top: 65px;
+    margin-right: -30px; }
+    @media screen and (max-width: 768px) {
+      .parent-row-opp .col-3 {
+        display: none; } }
+  .parent-row-opp .col-4 {
+    flex-direction: column;
+    width: auto;
+    padding: 20px; }
+    @media screen and (max-width: 768px) {
+      .parent-row-opp .col-4 {
+        margin: 0 auto; } }
+
+p.story {
+  padding: 0px 20px;
+  margin: 20px auto;
+  max-width: 350px;
+  font-family: "Muli", sans-serif; }
+
+img.timeline-image {
+  margin: 0 auto;
+  flex-shrink: 0; }
+
+.time-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 5px #262626;
+  background: #fff;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%; }
+  .time-circle p {
+    text-align: center;
+    font-family: "Muli", sans-serif;
+    font-size: 2em;
+    padding-top: 29px; }
